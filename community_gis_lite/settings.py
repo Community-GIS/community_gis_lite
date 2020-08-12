@@ -59,7 +59,9 @@ INSTALLED_APPS = [
     'taggit',
 
     'theme_details_cms.apps.ThemeDetailsCmsConfig',
+    'form_cms.apps.FormCmsConfig',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
