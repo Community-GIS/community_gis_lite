@@ -1,0 +1,41 @@
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %} 
+{% load static%}
+{% for card in self.cards %}
+<div class="container">
+
+    {% image card.image fill-300x450 as img %}
+
+    <div
+    
+    class="card-container"
+        style="background: url('{% static '' %}'); background-size: cover; background-image: url({{ img.url }});" >
+
+    <div class="overlay">
+
+        <div class="items"></div>
+         <div class="items head">
+                <p>
+
+                    <b>{{card.title}} <br /><br />
+                        
+                </p>
+                <br/>
+                <p><b>{{card.description}}</b></p>                       
+                <hr />
+            </div>
+
+            <div class="items cart">
+                <a
+                    href="{{card.url}}"
+                    class="btn"
+                    style="font-size: 150%; background-color: beige; color: darkslategray;"
+                    >{{card.button_page_name}}</a
+                >
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endfor %}		
+				
