@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'base.apps.BaseConfig',  #landing page
+    
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -58,6 +58,10 @@ INSTALLED_APPS = [
     'modelcluster',
     'taggit',
 
+    'django.contrib.gis',
+    'wagtailgeowidget',
+
+    'base.apps.BaseConfig',  #landing page
     'theme_details_cms.apps.ThemeDetailsCmsConfig',
     'form_cms.apps.FormCmsConfig',
 ]
@@ -106,6 +110,15 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+
+     'datastore': {
+        'NAME': 'comgis_data',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'localhost',
+        'PORT' : '5432'
     }
 }
 
@@ -153,3 +166,4 @@ STATIC_ROOT = "/static/"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR_2, "static"),
 ]
+

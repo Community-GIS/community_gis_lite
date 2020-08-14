@@ -5,8 +5,9 @@ from wagtail.core.fields import RichTextField
 from wagtail.core.fields import StreamField
 from streams import blocks
 
-class HomePage(Page):
+class ThemeListingPage(Page):
     template="home/home_page.html"
+    max_count = 1
     content= StreamField(
         [ 
             ("cards", blocks.CardBlock()),
@@ -20,6 +21,5 @@ class HomePage(Page):
         StreamFieldPanel("content"),   
     ]
     class Meta:
-        verbose_name="home_page"
-        verbose_name_plural="home_pages"
+        verbose_name="theme_listing_page"
 
