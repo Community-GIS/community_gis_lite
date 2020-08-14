@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     'base.apps.BaseConfig',  #landing page
     'theme_details_cms.apps.ThemeDetailsCmsConfig',
     'form_cms.apps.FormCmsConfig',
+    'blog_cms.apps.BlogCmsConfig',
 ]
 
 
