@@ -8,6 +8,7 @@ from streams import blocks
 class ThemeListingPage(Page):
     template="home/home_page.html"
     max_count = 1
+    subpage_types = ['form_cms.FormPage']
     content= StreamField(
         [ 
             ("cards", blocks.CardBlock()),
