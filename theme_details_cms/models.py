@@ -7,7 +7,7 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 
 
 class ThemeDetailsCMSPage(Page):
-	subpage_types = ['form_cms.FormPage','blog_cms.BlogPage',]    
+	# subpage_types = ['form_cms.FormPage','blog_cms.BlogPage',]    
 	description = RichTextField(features=["bold","italic","link","images","ol","ul","document-link","link","image","embed"],blank=True)
 	background_image= models.ForeignKey(
     		"wagtailimages.Image",

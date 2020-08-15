@@ -22,6 +22,8 @@
     {% csrf_token %}
     {{ form.as_ul }}
     <input type="submit"/>
+    {{ self.location }}
+
 </form>
 
 {% endblock %}

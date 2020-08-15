@@ -24,6 +24,8 @@ from wagtail.core import urls as wagtail_urls
 
 from django.conf import settings
 from django.conf.urls.static import static
+# from test_form import views as test_views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,6 +33,8 @@ urlpatterns = [
     re_path(r'^cms/', include(wagtailadmin_urls)),
     re_path(r'^documents/', include(wagtaildocs_urls)),
     re_path(r'^themes/', include(wagtail_urls)),
+    # path('test/', test_views.suggest),
+
 
     path('map.themes/facility_gis/',include('fgis.urls')),
    

@@ -59,12 +59,13 @@ INSTALLED_APPS = [
     'taggit',
 
     'django.contrib.gis',
-    'wagtailgeowidget',
+    'wagtailleafletwidget',
 
     'base.apps.BaseConfig',  #landing page
     'theme_details_cms.apps.ThemeDetailsCmsConfig',
     'form_cms.apps.FormCmsConfig',
     'blog_cms.apps.BlogCmsConfig',
+    'test_form',
 ]
 
 
@@ -108,12 +109,12 @@ WSGI_APPLICATION = 'community_gis_lite.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    },
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # },
 
-     'datastore': {
+     'default': {
         'NAME': 'comgis_data',
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'USER': 'postgres',
